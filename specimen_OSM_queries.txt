@@ -1,0 +1,58 @@
+/*
+This is a collection of examples used for my PyConCZ 2019 talk
+*/
+
+
+node
+  [amenity=library]
+  (around: 50, 49.812428, 18.2718844);
+out;
+
+
+/*
+node
+  (around: 30, 49.8208386, 18.2805197); /* only four points - good as demo*/
+
+/*
+node
+  [public_transport]
+  (around: 1000, 49.8211581, 18.2782733); /* public_transport POIs as node*/
+
+/*
+(node 
+  [public_transport]
+  (around: 1000, 49.8211581, 18.2782733);
+ way
+  [public_transport]
+  (around: 1000, 49.8211581, 18.2782733);
+ rel
+ [public_transport]
+ (around: 1000, 49.8211581, 18.2782733);
+);
+*/
+
+/*
+(node 
+  [amenity=library]
+  (around: 2000, 49.8211581, 18.2782733);
+ way
+  [amenity=library]
+  (around: 2000, 49.8211581, 18.2782733);
+ rel
+ [amenity=library]
+ (around: 2000, 49.8211581, 18.2782733);
+);
+*/
+
+
+(node 
+  [~"(leisure|amenity)"~"(playground|library)"]
+  (around: 1500, 49.8211581, 18.2782733);
+ way
+  [~"(leisure|amenity)"~"(playground|library)"]
+  (around: 1500, 49.8211581, 18.2782733);
+ rel
+  [~"(leisure|amenity)"~"(playground|library)"]
+  (around: 1500, 49.8211581, 18.2782733);
+);
+out center;
